@@ -1,9 +1,12 @@
 @charset "utf-8";
 @import "../../node_modules/bulma/bulma.sass";
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap');
 
 $primary-color: #a6f3ed
 $secondary-color: #8638e9
 
+body
+    font-family: 'Mukta', sans-serif;
 .brand 
     border: 1px solid black;
 
@@ -22,6 +25,14 @@ button.dot___3c3SI.carousel__dot
     height: 20px;
     border-radius: 20px;
     border: none;
+    margin-left: 5px;
 
 .is-secondary-color
     color: $secondary-color
+
+.is-secondary-color-bg
+    background: $secondary-color
+
+h1.is-size-1
+    line-height: 3rem;
+    

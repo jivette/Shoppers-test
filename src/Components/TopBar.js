@@ -1,17 +1,15 @@
 import React from 'react'
+import { FaCartArrowDown, FaRegHeart, FaUser } from "react-icons/fa";
 
 function TopBar() {
     return (
         <nav className="navbar is-transparent">
 
-                <div id="navbarExampleTransparentExample" className="navbar-menu">
+                <div id="navbarExampleTransparentExample" className="navbar-menu is-align-items-center">
                     <div className="navbar-start">
                         <div class="field">
-                            <p class="control has-icons-left">
+                            <p class="control">
                                 <input class="input" type="text" placeholder="Search"/>
-                                <span class="icon is-small is-left">
-                                <i class="fas fa-lock"></i>
-                                </span>
                             </p>
                         </div>
                     </div>
@@ -21,14 +19,14 @@ function TopBar() {
                         </a>
                     </div>
                     <div className="navbar-end">
-                        <span class="icon has-text-info">
-                            <i class="fas fa-info-circle"></i>
+                        <span class="icon">
+                            <FaUser/>
                         </span>
                         <span class="icon">
-                            <i class="fas fa-home"></i>
-                        </span>
+                        <FaRegHeart/>
+                        </span>                    
                         <span class="icon">
-                            <i class="fas fa-home"></i>
+                        <FaCartArrowDown/>
                         </span>                    
                     </div>
                 </div>

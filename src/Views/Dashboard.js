@@ -6,73 +6,8 @@ import TopBar from '../Components/TopBar'
 import Children from "../images/children.jpg";
 import Men from "../images/men.jpg";
 import Women from "../images/women.jpg";
-
-const Slides = [
-    {
-        title: "Finding your perfect shoes",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        image: require("../images/hero_1.png")
-    },
-    {
-        title: "Finding your perfect shoes 2",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
-        image: require("../images/hero_1.png")
-    }
-]
-const Products = [
-    {
-        title: "Tank Top",
-        content: "Finding perfect products",
-        price: 50,
-        image: require("../images/cloth_1.jpg")
-    },
-    {
-        title: "Corater",
-        content: "Finding perfect products",
-        price: 50,
-        image: require("../images/cloth_2.jpg")
-    },
-    {
-        title: "Polo Shirt",
-        content: "Finding perfect products",
-        price: 50,
-        image: require("../images/cloth_3.jpg")
-    },
-    {
-        title: "Tank Top",
-        content: "Finding perfect products",
-        price: 50,
-        image: require("../images/cloth_1.jpg")
-    },
-    {
-        title: "Corater",
-        content: "Finding perfect products",
-        price: 50,
-        image: require("../images/cloth_2.jpg")
-    },
-    {
-        title: "Polo Shirt",
-        content: "Finding perfect products",
-        price: 50,
-        image: require("../images/cloth_3.jpg")
-    }
-]
-
-const itemsContent = [
-    {
-        title: "FREE SHIPPING",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text."
-    },
-    {
-        title: "FREE RETURNS",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text."
-    },
-    {
-        title: "CUSTOMER SUPPORT",
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text."
-    }
-]
-
+import Blog from "../images/blog_1.jpg";
+import { itemsContent, Products, Slides } from '../Mocks'
 
 function Dashboard() {
 
@@ -85,7 +20,7 @@ function Dashboard() {
                     naturalSlideWidth={100}
                     naturalSlideHeight={40}
                     totalSlides={Slides.length}
-                    dots
+                    dots={true}
                 />
             </div>
             <div className="columns p-6">
@@ -94,19 +29,19 @@ function Dashboard() {
                 })}
             </div>
 
-            <div className="columns">
-                <div className="column">
-                    <img src={Women}/>
+                <div className="columns mt-6 mb-6">
+                    <div className="column">
+                        <img src={Women}/>
+                    </div>
+                    <div className="column">
+                        <img src={Children}/>
+                    </div>
+                    <div className="column">
+                        <img src={Men}/>
+                    </div>
                 </div>
-                <div className="column">
-                    <img src={Children}/>
-                </div>
-                <div className="column">
-                    <img src={Men}/>
-                </div>
-            </div>
 
-            <div>
+            <div className="mt-6 mb-6 pt-6 ">
                 <h1 className="has-text-centered is-size-3">Featured Products</h1>
                 <Carousel slides={Products}
                     visibleSlides={3}
@@ -114,10 +49,34 @@ function Dashboard() {
                     naturalSlideWidth={400}
                     naturalSlideHeight={500}
                     totalSlides={6}
-                    buttonCentered
+                    buttonCentered={true}
                 />
                 
             </div>
+
+            <section class="hero mt-6 mb-6">
+            <h1 className="has-text-centered is-size-3">Big Sale!</h1>
+                <div class="hero-body">
+                <div className="columns is-align-items-center">
+                    <div className="column is-three-fifths">
+                        <img src={Blog}/>
+                    </div>
+                    <div className="column has-text-centered">
+                        <p className="title is-secondary-color has-text-centered">
+                        50% less in all items
+                        </p>
+                        <p className="subtitle has-text-centered has-text-weight-light has-text-grey">
+                            By <span class="is-secondary-color is-font-weight-bold">Juan Carlos</span> - September 2020    
+                        </p>
+                        <p className="subtitle has-text-centered has-text-weight-light">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.                       
+                        </p>
+                        <button class="button has-text-white is-medium mt-5 is-secondary-color-bg">Shop Now</button>
+                    </div>
+                </div>
+
+                </div>
+            </section>
         </div>
     )
 }
